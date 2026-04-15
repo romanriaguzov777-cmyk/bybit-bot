@@ -1,0 +1,35 @@
+mode: demo
+symbols: [SOLUSDT, ETHUSDT]
+btc_filter_symbol: BTCUSDT
+sqlite_path: data/bot.db
+risk_ladder:
+  IGNITION:
+    a: [0.06, 0.08]
+    a_plus: [0.10, 0.12]
+    axx: [0.12, 0.15]
+  EXPANSION:
+    a: [0.05, 0.06]
+    a_plus: [0.08, 0.10]
+    axx: [0.10, 0.12]
+  PRESS:
+    a: [0.04, 0.05]
+    a_plus: [0.06, 0.08]
+    axx: [0.08, 0.10]
+daily_limits:
+  ignition: 0.18
+  expansion: 0.14
+  press: 0.10
+  consecutive_losses_ignition: 2
+score_thresholds:
+  a: 68
+  a_plus: 80
+  axx: 90
+funding_lock_minutes: 20
+max_open_campaigns: 1
+addon_max:
+  IGNITION: 1
+  EXPANSION: 2
+  PRESS: 2
+execution_preference: [POST_ONLY, LIMIT, MARKET]
+log_level: INFO
+heartbeat_seconds: 20

@@ -1,0 +1,1 @@
+"""Bybit campaign bot package."""
